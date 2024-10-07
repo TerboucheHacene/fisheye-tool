@@ -7,9 +7,15 @@ readme = "README.md"
 packages = [ { include = "fisheye", from = "src" } ]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = ">=3.9,<3.13"
 tqdm = "^4.66.2"
 numpy = ">=1.25,<2.0"
+opencv-python = "^4.10.0.84"
+pyside6 = "^6.7.3"
+pyqtgraph = "^0.13.7"
+pyopengl = "^3.1.7"
+pyopengl-accelerate = "^3.1.7"
+typer = "^0.12.5"
 
 
 
@@ -36,6 +42,9 @@ Sphinx = ">=7.3.7"
 myst-nb = ">=1.0"
 sphinx-autoapi = ">=1.8"
 sphinx-rtd-theme = ">=2.0"
+
+[tool.poetry.scripts]
+fisheye = "fisheye.cli:app"
 
 
 [tool.black]
