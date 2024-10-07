@@ -6,6 +6,26 @@ This tool can be used to convert fisheye images to perspective images. It can be
 - A python library
 - a GUI tool
 
+## Table of Contents
+
+- [Overview](#overview)
+  * [Fisheye projection models](#fisheye-projection-models)
+    + [Equidistant Projection](#equidistant-projection)
+    + [Equal-area Projection](#equal-area-projection)
+    + [Orthographic Projection](#orthographic-projection)
+    + [Stereographic Projection](#stereographic-projection)
+  * [Fisheye Lens Types](#fisheye-lens-types)
+    + [Circular Fisheye Lens](#circular-fisheye-lens)
+    + [Diagonal (Full-frame) Fisheye Lens](#diagonal--full-frame--fisheye-lens)
+- [Installation](#installation)
+- [Usage](#usage)
+  * [Command line tool](#command-line-tool)
+  * [Python library](#python-library)
+  * [GUI tool](#gui-tool)
+- [Examples](#examples)
+- [License](#license)
+- [References](#references)
+
 ## Overview
 A fisheye lens is a type of ultra-wide-angle lens that captures images with an expansive
 field of view, often 180 degrees or more. It creates a distinctive distortion, where
@@ -69,11 +89,11 @@ This projection is widely used in panoramic and wide-angle photography due to it
 
 Fisheye lenses come in two main types, each with distinct characteristics based on how the image circle interacts with the sensor or film area.
 
-### 1. **Circular Fisheye Lens**
+#### **Circular Fisheye Lens**
 
 In a circular fisheye lens, the image circle is fully inscribed within the film or sensor area, meaning the resulting image appears circular with black edges around it. This lens captures a 180-degree field of view or more, but only in the circular area of the sensor.
 
-### 2. **Diagonal (Full-frame) Fisheye Lens**
+#### **Diagonal (Full-frame) Fisheye Lens**
 
 In a diagonal (also known as "full-frame") fisheye lens, the image circle is circumscribed around the film or sensor area. This means that the fisheye effect spans the entire frame, with the image extending to the edges of the sensor. The diagonal fisheye still provides a wide field of view, but unlike circular fisheye lenses, it fills the whole frame.
 
