@@ -1,0 +1,31 @@
+name: Publish Python Package
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - '*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+
+      - name: Install Poetry
+        run: curl -sSL https://install.python-poetry.org | python3 -
+
+      - name: Install Dependencies
+        run: poetry install
+
+      - name: Publish to PyPI
+        env:
+          POETRY_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}  # Add your token in GitHub Secrets
+        run: poetry publish --build --username __token__ --password $POETRY_PASSWORD
