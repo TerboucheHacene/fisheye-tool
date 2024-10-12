@@ -101,7 +101,13 @@ In a diagonal (also known as "full-frame") fisheye lens, the image circle is cir
 
 ## Installation
 
-First clone the repo:
+To use the fisheye-tool, you can install it using pip:
+
+```bash
+pip install fisheye-tools
+```
+
+Alternatively, you can clone the repository and install the dependencies manually:
 ```bash
 git clone git@github.com:TerboucheHacene/fisheye-tool.git
 cd fisheye-tool
